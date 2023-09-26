@@ -13,6 +13,15 @@ This iframe shows the latest job offers listed on a Datalumni platform.
 
 The results may be filtered by *Business Sector* and/or *Contract Type* (see [Parameters](#parameters)).
 
+```html
+<iframe
+    id="iframe-jobs"
+    src="<!-- URL HERE -->"
+    title="<!-- TITLE HERE -->"
+    style="border: 0; width: 100%;"
+></iframe>
+```
+
 ### URL
 
 - Base URL: `/api/jobs/public/latest/`
