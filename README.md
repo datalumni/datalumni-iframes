@@ -5,8 +5,8 @@
     - [How to insert the iframe into a website?](#how-to-insert-the-iframe-into-a-website)
     - [URL](#url)
     - [Parameters](#parameters)
-        - [Fisrt step, how do I know the IDs I should use?](#fisrt-step-how-do-i-know-the-ids-i-should-use)
-        - [Query parameters](#query-parameters)
+        - [Step 1: how do I know the IDs I should use?](#step-1-how-do-i-know-the-ids-i-should-use)
+        - [Step 2: Use IDs with query parameters](#step-2-use-ids-with-query-parameters)
         - [Example of complete URL with filters](#example-of-complete-url-with-filters)
     - [Serve example iframe locally](#serve-example-iframe-locally)
 <!-- /TOC -->
@@ -52,7 +52,7 @@ Example: https://www.my-platform-domain.com/api/jobs/public/latest/
 
 The job offers listed on this iframe may be filtered by *Business Sector* and / or *Contract Type*, using target value IDs.
 
-#### Fisrt step, how do I know the IDs I should use?
+#### Step 1: how do I know the IDs I should use?
 
 You can get an exhaustive list of usable IDs using the parameter `debug=true`.
 
@@ -61,7 +61,7 @@ You can get an exhaustive list of usable IDs using the parameter `debug=true`.
 https://welcome.datalumni.com/api/jobs/public/latest/?debug=true
 ```
 
-#### Query parameters
+#### Step 2: Use IDs with query parameters
 
 Any of the following parameters can be appended to the base URL (as query parameters) in order to filter out results.
 
