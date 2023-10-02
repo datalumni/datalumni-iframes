@@ -2,8 +2,12 @@
 
 <!-- TOC -->
 - [Latest job offers](#latest-job-offers)
+    - [How to insert the iframe into a website?](#how-to-insert-the-iframe-into-a-website)
     - [URL](#url)
     - [Parameters](#parameters)
+        - [Fisrt step, how do I know the IDs I should use?](#fisrt-step-how-do-i-know-the-ids-i-should-use)
+        - [Query parameters](#query-parameters)
+        - [Example of complete URL with filters](#example-of-complete-url-with-filters)
     - [Serve example iframe locally](#serve-example-iframe-locally)
 <!-- /TOC -->
 
@@ -13,14 +17,22 @@ This iframe shows the latest job offers listed on a Datalumni platform.
 
 The results may be filtered by *Business Sector* and/or *Contract Type* (see [Parameters](#parameters)).
 
+### How to insert the iframe into a website?
+
+In order to display the latest job offers listed on a Datalumni platform through an iframe, copy / paste the code below onto your page (this is usually done using an HTML editor).
+
 ```html
 <iframe
     id="iframe-jobs"
-    src="<!-- URL HERE -->"
-    title="<!-- TITLE HERE -->"
+    src="<!-- INSERT URL HERE -->"
+    title="<!-- INSERT TITLE HERE -->"
     style="border: 0; width: 100%;"
 ></iframe>
 ```
+
+- **URL** (`src`): Insert the URL of the iframe in the `src` attribute. (See [URL](#url) and [Parameters](#parameters) sections below)
+
+- **Title** (`title`): This title will not be displayed on your site, but it's good practice to fill it in for accessibility reasons. (See [`iframe` accessibility](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#accessibility_concerns))
 
 ### URL
 
@@ -38,25 +50,47 @@ Example: https://www.my-platform-domain.com/api/jobs/public/latest/
 
 ### Parameters
 
-Any of the following parameters can be appended to the base URL (as query string) in order to filter out results.
+The job offers listed on this iframe may be filtered by *Business Sector* and / or *Contract Type*, using target value IDs.
 
-- `bs=<int>`, optional, default: `(empty)` (no filters applied)
-    - Business Sector's ID. List of IDs is shown when using `debug=true` parameter.
+#### Fisrt step, how do I know the IDs I should use?
 
-- `ct=<int>`, optional, default: `(empty)` (no filters applied)
-    - Contract Type's ID. List of IDs is shown when using `debug=true` parameter.
-
-- `debug=<boolean>`, optional, default: `false`
-    - Lists all available IDs for above parameters to console.
+You can get an exhaustive list of usable IDs using the parameter `debug=true`.
 
 ```html
-?bs=<int: null>&ct=<int: null>&debug=<boolean: false>
+<!-- Example -->
+https://welcome.datalumni.com/api/jobs/public/latest/?debug=true
 ```
 
-*Examples:*
+#### Query parameters
 
-- `https://welcome.datalumni.com/api/jobs/public/latest/?bs=1&ct=7`
-- `https://welcome.datalumni.com/api/jobs/public/latest/?debug=true`
+Any of the following parameters can be appended to the base URL (as query parameters) in order to filter out results.
+
+- `bs=<number>`
+    - Replace `<number>` with a list of Business Sector's ID to apply filters.
+    - You can insert multiple values, separated by a comma "`,`" (no whitespaces around, example: `1,2,3`)
+    - This parameter is optional. If it is omitted, all data is displayed.
+
+- `ct=<number>`
+    - Replace `<number>` with a list of Contract Type's ID to apply filters.
+    - You can insert multiple values, separated by a comma "`,`" (no whitespaces around, example: `1,2,3`)
+    - This parameter is optional. If it is omitted, all data is displayed.
+
+```html
+?bs=<number>&ct=<number>
+```
+
+#### Example of complete URL with filters
+
+```html
+<!-- A single Business Sector -->
+https://welcome.datalumni.com/api/jobs/public/latest/?bs=1
+
+<!-- A Business Sector and a Contract type -->
+https://welcome.datalumni.com/api/jobs/public/latest/?bs=2&ct=3
+
+<!-- Multiple Business Sectors and multiple Contract Types -->
+https://welcome.datalumni.com/api/jobs/public/latest/?bs=4,5&ct=6,7,8
+```
 
 ### Serve example iframe locally
 
