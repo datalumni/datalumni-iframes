@@ -60,6 +60,8 @@ You can change height in `style` attribute, according to your needs
 - Maximum card available: `3`
 - Card size: `200` pixels per card
 
+Show [examples](#examples-of-height-settings) for usage
+
 ### Parameters
 
 The job offers listed on this iframe may be filtered by *Business Sector* and / or *Contract Type*, using target value IDs.
