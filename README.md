@@ -2,13 +2,15 @@
 
 <!-- TOC -->
 - [Latest job offers](#latest-job-offers)
-    - [How to insert the iframe into a website?](#how-to-insert-the-iframe-into-a-website)
-    - [URL](#url)
-    - [Parameters](#parameters)
-        - [Step 1: how do I know the IDs I should use?](#step-1-how-do-i-know-the-ids-i-should-use)
-        - [Step 2: Use IDs with query parameters](#step-2-use-ids-with-query-parameters)
-        - [Example of complete URL with filters](#example-of-complete-url-with-filters)
-    - [Serve example iframe locally](#serve-example-iframe-locally)
+  - [How to insert the iframe into a website?](#how-to-insert-the-iframe-into-a-website)
+  - [URL](#url)
+  - [Height](#height)
+  - [Parameters](#parameters)
+    - [Step 1: how do I know the IDs I should use?](#step-1-how-do-i-know-the-ids-i-should-use)
+    - [Step 2: Use IDs with query parameters](#step-2-use-ids-with-query-parameters)
+    - [Example of complete URL with filters](#example-of-complete-url-with-filters)
+    - [Examples of height settings](#examples-of-height-settings)
+  - [Serve example iframe locally](#serve-example-iframe-locally)
 <!-- /TOC -->
 
 ## Latest job offers
@@ -26,13 +28,16 @@ In order to display the latest job offers listed on a Datalumni platform through
     id="iframe-jobs"
     src="<!-- INSERT URL HERE -->"
     title="<!-- INSERT TITLE HERE -->"
-    style="border: 0; width: 100%;"
+    style="border: 0; width: 100%; height: <height>px;"
+    scrolling="no"
 ></iframe>
 ```
 
 - **URL** (`src`): Insert the URL of the iframe in the `src` attribute. (See [URL](#url) and [Parameters](#parameters) sections below)
 
 - **Title** (`title`): This title will not be displayed on your site, but it's good practice to fill it in for accessibility reasons. (See [`iframe` accessibility](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#accessibility_concerns))
+
+- **Height** (`style`): In the `style` attribute of the iframe. (See [Height](#height) section)
 
 ### URL
 
@@ -47,6 +52,15 @@ Example: https://welcome.datalumni.com/api/jobs/public/latest/
 https://<platform-domain>/api/jobs/public/latest/
 Example: https://www.my-platform-domain.com/api/jobs/public/latest/
 ```
+
+### Height
+
+You can change height in `style` attribute, according to your needs
+
+- Maximum card available: `3`
+- Card size: `200` pixels per card
+
+Show [examples](#examples-of-height-settings) for usage
 
 ### Parameters
 
@@ -66,14 +80,14 @@ https://welcome.datalumni.com/api/jobs/public/latest/?debug=true
 Any of the following parameters can be appended to the base URL (as query parameters) in order to filter out results.
 
 - `bs=<number>`
-    - Replace `<number>` with a list of Business Sector's ID to apply filters.
-    - You can insert multiple values, separated by a comma "`,`" (no whitespaces around, example: `1,2,3`)
-    - This parameter is optional. If it is omitted, all data is displayed.
+  - Replace `<number>` with a list of Business Sector's ID to apply filters.
+  - You can insert multiple values, separated by a comma "`,`" (no whitespaces around, example: `1,2,3`)
+  - This parameter is optional. If it is omitted, all data is displayed.
 
 - `ct=<number>`
-    - Replace `<number>` with a list of Contract Type's ID to apply filters.
-    - You can insert multiple values, separated by a comma "`,`" (no whitespaces around, example: `1,2,3`)
-    - This parameter is optional. If it is omitted, all data is displayed.
+  - Replace `<number>` with a list of Contract Type's ID to apply filters.
+  - You can insert multiple values, separated by a comma "`,`" (no whitespaces around, example: `1,2,3`)
+  - This parameter is optional. If it is omitted, all data is displayed.
 
 ```html
 ?bs=<number>&ct=<number>
@@ -90,6 +104,32 @@ https://welcome.datalumni.com/api/jobs/public/latest/?bs=2&ct=3
 
 <!-- Multiple Business Sectors and multiple Contract Types -->
 https://welcome.datalumni.com/api/jobs/public/latest/?bs=4,5&ct=6,7,8
+```
+
+#### Examples of height settings
+
+```html
+<!-- One offer -->
+<iframe
+    ...
+    style="border: 0; width: 100%; height: 200px;"
+    scrolling="no"
+></iframe>
+
+<!-- Two offers -->
+<iframe
+    ...
+    style="border: 0; width: 100%; height: 400px;"
+    scrolling="no"
+></iframe>
+
+<!-- Three offers -->
+<iframe
+    ...
+    style="border: 0; width: 100%; height: 600px;"
+    scrolling="no"
+></iframe>
+
 ```
 
 ### Serve example iframe locally
