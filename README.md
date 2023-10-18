@@ -39,7 +39,7 @@ In order to display the latest job offers listed on a Datalumni platform through
 
 - **Height** (`style`): In the `style` attribute of the iframe. (See [Height](#height) section)
 
-- **Scrolling** : define to `no`, clears the movement bars (scrollbars)
+- **Scrolling** : Defined to `no`, clears the movement bars (scrollbars)
 
 ### URL
 
