@@ -39,6 +39,8 @@ In order to display the latest job offers listed on a Datalumni platform through
 
 - **Height** (`style`): In the `style` attribute of the iframe. (See [Height](#height) section)
 
+- **Scrolling** : Defined to `no`, clears the movement bars (scrollbars)
+
 ### URL
 
 - Base URL: `/api/jobs/public/latest/`
@@ -111,21 +113,27 @@ https://welcome.datalumni.com/api/jobs/public/latest/?bs=4,5&ct=6,7,8
 ```html
 <!-- One offer -->
 <iframe
-    ...
+    id="iframe-jobs"
+    src="https://your.source.url"
+    title="your title"
     style="border: 0; width: 100%; height: 200px;"
     scrolling="no"
 ></iframe>
 
 <!-- Two offers -->
 <iframe
-    ...
+    id="iframe-jobs"
+    src="https://your.source.url"
+    title="your title"
     style="border: 0; width: 100%; height: 400px;"
     scrolling="no"
 ></iframe>
 
 <!-- Three offers -->
 <iframe
-    ...
+    id="iframe-jobs"
+    src="https://your.source.url"
+    title="your title"
     style="border: 0; width: 100%; height: 600px;"
     scrolling="no"
 ></iframe>
