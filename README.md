@@ -22,7 +22,7 @@ This iframe shows the latest job offers listed on a Datalumni platform.
 
 The results may be filtered by *Business Sector* and/or *Contract Type* (see [Parameters](#parameters)).
 
-It result can be stylized, inline or in columns (see [styles](#styles))
+It result can be stylized, inline or in columns (see [optional - use style query parameters](#optional-use-style-query-parameters))
 
 ### How to insert the iframe into a website?
 
@@ -71,7 +71,7 @@ Minimum size of iframe needed to show correctly tiles *(see adjustment with your
 
 - inlines offers:
   - minimum height: 473 pixels
-  - minimu width: 325 pixels
+  - minimum width: 325 pixels
 
 #### example of styles adjustments (CSS script)
 
@@ -98,7 +98,8 @@ Minimum size of iframe needed to show correctly tiles *(see adjustment with your
         }
         #jobs123 {
           width: 100%;
-          /* use this to times by the count of offers you want to see when users are on small screens */
+          /* use this to times by the count of offers you want to see */
+          /* when users are on small screens */
           height: calc(473px * 2);
         }
     }
