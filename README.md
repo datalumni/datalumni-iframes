@@ -12,7 +12,7 @@
     - [Step 1: how do I know the IDs I should use?](#step-1-how-do-i-know-the-ids-i-should-use)
     - [Step 2: Use IDs with query parameters](#step-2-use-ids-with-query-parameters)
     - [Example of complete URL with filters](#example-of-complete-url-with-filters)
-    - [Optional: Use Style query parameters](#optional-use-style-query-parameters)
+    - [Optional - Use styles query parameters](#optional---use-styles-query-parameters)
   - [Serve example iframe locally](#serve-example-iframe-locally)
 <!-- /TOC -->
 
@@ -22,7 +22,7 @@ This iframe shows the latest job offers listed on a Datalumni platform.
 
 The results may be filtered by *Business Sector* and/or *Contract Type* (see [Parameters](#parameters)).
 
-It result can be stylized, inline or in columns (see [optional - use style query parameters](#optional-use-style-query-parameters))
+It result can be stylized, inline or in columns (see [Optional - Use styles query parameters](#optional---use-styles-query-parameters))
 
 ### How to insert the iframe into a website?
 
@@ -173,7 +173,7 @@ https://welcome.datalumni.com/api/jobs/public/latest/?bs=2&ct=3
 https://welcome.datalumni.com/api/jobs/public/latest/?bs=4,5&ct=6,7,8
 ```
 
-#### Optional: Use Style query parameters
+#### Optional - Use styles query parameters
 
 Like filters you can use some styles
 
