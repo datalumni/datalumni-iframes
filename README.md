@@ -178,21 +178,21 @@ https://welcome.datalumni.com/api/jobs/public/latest/?bs=4,5&ct=6,7,8
 Like filters you can use some styles
 
 - `inline=true/false`
-  - Raplace `true/false` with the correct boolean, it could display offers in column or inline
+  - Replace `true/false` with the correct boolean, it could display offers in column or inline
   - This parameter is optional. If it is omitted, it display by default in column.
 
 - `rounded=true/false` (only for inline usage)
-  - Raplace `true/false` with the correct boolean, it round corners and buttons to inline cards
+  - Replace `true/false` with the correct boolean, it round corners and buttons to inline cards
   - This parameter is optional. If it is omitted, it display squared corners.
   - Need `inline=true` to be used
 
 - `wrap=true/false` (only for inline usage, column are already in correct side)
-  - Raplace `true/false` with the correct boolean, it wrap cards on small screens
+  - Replace `true/false` with the correct boolean, it wrap cards on small screens
   - This parameter is optional. If it is omitted, it display cards side by side.
   - Need `inline=true` to be used
 
 - `color=true/false` (only for inline usage no buttons in column)
-  - Raplace `true/false` with the correct boolean, it change the button background color to `your platform` primary color
+  - Replace `true/false` with the correct boolean, it change the button background color to `your platform` primary color
   - This parameter is optional. If it is omitted, it display default background color.
   - Need `inline=true` to be used
 
