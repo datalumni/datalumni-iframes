@@ -110,6 +110,8 @@ Like filters you can use some customize your iframe content
   - Replace `true/false` with the correct boolean, it could display offers in column or inline
   - This parameter is optional. If it is omitted, it display by default in column.
 
+![inline](pics/inline.png)
+
 #### Rounded corners and button
 
 - `rounded=true/false` (only for inline usage)
@@ -117,12 +119,16 @@ Like filters you can use some customize your iframe content
   - This parameter is optional. If it is omitted, it display squared corners.
   - Need `inline=true` to be used
 
+![inline](pics/rounded.png)
+
 #### Use your platform colors
 
 - `color=true/false` (only for inline usage no buttons in column)
   - Replace `true/false` with the correct boolean, it change the button background color to `your platform` primary color
   - This parameter is optional. If it is omitted, it displays default background color (blue).
   - Need `inline=true` to be used
+
+![inline](pics/color.png)
 
 #### Sizing
 
