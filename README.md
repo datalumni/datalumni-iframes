@@ -9,18 +9,21 @@
     - [Step 2: how do I know the IDs I should use?](#step-2-how-do-i-know-the-ids-i-should-use)
     - [Example of complete URL with filters](#example-of-complete-url-with-filters)
   - [Optional - Use styles query parameters](#optional---use-styles-query-parameters)
-  - [Serve example iframe locally](#serve-example-iframe-locally)
-  - [Sizing](#sizing)
+    - [Choose between column or inline job ads](#choose-between-column-or-inline-job-ads)
+    - [Rounded corners and button](#rounded-corners-and-button)
+    - [Use your platform colors](#use-your-platform-colors)
+    - [Sizing](#sizing)
     - [example of styles adjustments (CSS script)](#example-of-styles-adjustments-css-script)
+  - [Serve example iframe locally](#serve-example-iframe-locally)
 <!-- /TOC -->
 
 ## Latest job offers
 
 This iframe shows the latest job offers listed on a Datalumni platform.
 
-The results may be filtered by *Business Sector* and/or *Contract Type* (see [Parameters](#parameters)).
+The results may be filtered by *Business Sector* and/or *Contract Type* (see [URL parameters](#url-parameters)).
 
-It result can be stylized, inline or in columns (see [Optional - Use styles query parameters](#optional---use-styles-query-parameters))
+The results can be displayed inline or in columns (see [Optional - Use styles query parameters](#optional---use-styles-query-parameters))
 
 ### How to insert the iframe into a website?
 
@@ -40,8 +43,8 @@ In order to display the latest job offers listed on a Datalumni platform through
 - **Title** (`title`): This title will not be displayed on your site, but it's good practice to fill it in for accessibility reasons. (See [`iframe` accessibility](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#accessibility_concerns))
 
 - **Scrolling option** :
-  - `no`, clears the movement bars (no scrollbars, no artifacts)
-  - `auto`, add automaticaly scrollbars when content overflowes, (it let a grey vertical scrollbar artifact when content did not overflowes)
+  - `no`, hides scrollbars and artifacts
+  - `auto`, automatically adds scrollbars when content overflows, (it let a grey vertical scrollbar artifact when content does not overflow)
 
 ### URL
 
@@ -74,35 +77,35 @@ Any of the following parameters can be appended to the base URL (as query parame
   - This parameter is optional. If it is omitted, all data is displayed.
 
 - `nb=<number>`
-  - Replace `<number>` with a count of offers you want to see
-  - Count of offers available is between 1 and 12
-  - This parameter is optional. If it is omitted, default count is 3 offers.
+  - Replace `<number>` with th enumber of offers to be displayed.
+  - There can be up to 12 job offers displayed (between 1 and 12).
+  - This parameter is optional. If it is omitted, defaults to 3.
 
-#### Step 2: how do I know the IDs I should use?
+#### Step 2: How do I know the IDs I should use?
 
 You can get an exhaustive list of usable IDs using the parameter `debug=true`.
 
 ```html
 <!-- Example -->
-https://<platform-subdomain>datalumni.com/api/jobs/public/latest/?debug=true
+https://<platform-subdomain>.datalumni.com/api/jobs/public/latest/?debug=true
 ```
 
 #### Example of complete URL with filters
 
 ```html
 <!-- A single Business Sector -->
-https://<platform-subdomain>datalumni.com/api/jobs/public/latest/?bs=1
+https://<platform-subdomain>.datalumni.com/api/jobs/public/latest/?bs=1
 
 <!-- A Business Sector and a Contract type -->
-https://<platform-subdomain>datalumni.com/api/jobs/public/latest/?bs=2&ct=3
+https://<platform-subdomain>.datalumni.com/api/jobs/public/latest/?bs=2&ct=3
 
 <!-- Multiple Business Sectors and multiple Contract Types -->
-https://<platform-subdomain>datalumni.com/api/jobs/public/latest/?bs=4,5&ct=6,7,8
+https://<platform-subdomain>.datalumni.com/api/jobs/public/latest/?bs=4,5&ct=6,7,8
 ```
 
 ### Optional - Use styles query parameters
 
-Like filters you can use some customize your iframe content
+Extra parameters you can be used in order to customize the iframe content.
 
 #### Choose between column or inline job ads
 
@@ -180,7 +183,9 @@ Minimum size of iframe needed to show correctly tiles *(see adjustment with your
     }
 ```
 
-### Serve example iframe locally
+### Contribution
+
+#### Serve example iframe locally
 
 ```sh
 cd ./latest-jobs
